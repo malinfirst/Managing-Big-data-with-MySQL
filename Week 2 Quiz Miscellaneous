@@ -1,0 +1,30 @@
+
+
+help table skuinfo;
+help table deptinfo;
+help table skstinfo;
+help table skstinfo_fix;
+select * from skuinfo where SKU='3631365';
+select top 1 sku from skstinfo_fix order by retail desc;
+select top 1 SKU, color from skuinfo where brand='LIZ CLAI' order by SKU desc ;
+
+help table strinfo;
+select count(distinct state) from strinfo 
+
+select dept from deptinfo sample 10
+
+select count (*) from deptinfo where deptdesc like 'e%'
+
+help table trnsact;
+
+select saledate from trnsact where orgprice<>sprice order by saledate asc;
+
+select max(orgprice-sprice) from trnsact where saledate = to_date('04/08/01','yy/mm/dd');
+
+select top 5 orgprice,sprice,register from trnsact where saledate between to_date('04/08/01','yy/mm/dd') and to_date('04/08/10','yy/mm/dd') order by orgprice desc, sprice desc;
+
+select distinct brand from skuinfo where brand like '%liz%';
+
+help table store_msa
+
+select top 1 store from store_msa where city in ('little rock','memphis','tulsa') order by store asc; 
