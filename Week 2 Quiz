@@ -1,0 +1,8 @@
+8. What was the highest original price in the Dillard’s database of the item with SKU 3631365?
+
+However it's a very simple question, I am pretty sure everyone will stick on this problem for a while. 
+Because we should use the table 'skstinfo_fix' instead of 'skstinfo'.
+
+So the query should be :
+
+select top 1 retail from skstinfo_fix where SKU='3631365' order by retail desc;
